@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './App.css';
 import FileExplorer from "./components/FileExplorer";
 import {fileStructure} from './constants'
 

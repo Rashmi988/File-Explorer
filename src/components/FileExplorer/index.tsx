@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import FolderHierarchy from "./FolderHierarchy";
 import { FILE_TYPE, FileExplorerProps } from "../../constants";
-import ActionsPopup from "./ActionsPopup";
+import ActionsPopup from "../ActionsPopup";
+import './FileExplorer.css'
 
 const FileExplorer: React.FC<FileExplorerProps> = ({ config, onFileSelect, selectedFileId }) => {
 

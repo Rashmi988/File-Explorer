@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FileExplorer from "../FileExplorer";
 import { FileHierarchyProps } from "../../constants";
+// import './FileExplorer.css'
 
 const FolderHierarchy: React.FC<FileHierarchyProps> = ({ conf, onFileSelect, selectedFileId }) => {
   const [isFolderOpen, setIsFolderOpen] = useState<Record<string, boolean>>({});
