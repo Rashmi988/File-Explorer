@@ -13,22 +13,22 @@ export interface FileItem {
     data?: FileItem[];       
   }
 
-export interface FileExplorerProps {
-    config: FileItem[];
-    onFileSelect: (id: number) => void;
-    selectedFileId?: number | undefined;
-}
+// export interface FileExplorerProps {
+//     config: FileItem[];
+//     onFileSelect: (id: number) => void;
+//     selectedFileId?: number | undefined;
+// }
 
-export interface FileHierarchyProps {
-    conf: FileItem;
-    onFileSelect: (id: number) => void;
-    selectedFileId?: number | undefined;
-}
+// export interface FileHierarchyProps {
+//     conf: FileItem;
+//     onFileSelect: (id: number) => void;
+//     selectedFileId?: number | undefined;
+// }
 
-export interface ActionsPopupProps {
-    onClose: () => void;
-    onAction: (action: string) => void;
-  }
+// export interface ActionsPopupProps {
+//     onClose: () => void;
+//     onAction: (action: string) => void;
+//   }
 
   export const fileStructure: FileItem[] = [{
     id: 1,

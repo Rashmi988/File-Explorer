@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import FolderHierarchy from "./FolderHierarchy";
-import { FILE_TYPE, FileExplorerProps } from "../../constants";
+import { FILE_TYPE } from "../../constants";
+import { FileExplorerProps } from "./model";
 import ActionsPopup from "../ActionsPopup";
 import './FileExplorer.css'
 

@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react';
-import {ActionsPopupProps} from '../../constants'
+import {ActionsPopupProps} from './model'
+import './ActionsPopup.css'
 
 
 const ActionsPopup: React.FC<ActionsPopupProps> = ({ onClose, onAction }) => {
