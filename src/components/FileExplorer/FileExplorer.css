@@ -46,3 +46,7 @@
     padding-left: 5px;
     width: fit-content;
 }
+
+.file-wrapper{
+    position: relative;
+}

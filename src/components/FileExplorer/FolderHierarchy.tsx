@@ -20,7 +20,10 @@ const FolderHierarchy: React.FC<FileHierarchyProps> = ({ conf, onFileSelect, sel
       <span className="folder">{conf?.name}</span>
       {(!!isFolderOpen?.[conf?.id] && (
         <div className="sub-folder-wrapper">
-          <FileExplorer config={conf?.data || []} onFileSelect={onFileSelect} selectedFileId={selectedFileId} />
+          <FileExplorer 
+            config={conf?.data || []} 
+            onFileSelect={onFileSelect} 
+            selectedFileId={selectedFileId}  />
         </div>
       )) ||
         null}

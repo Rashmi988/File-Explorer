@@ -1,13 +1,15 @@
-import React, {useState} from "react";
+import React, {useContext} from "react";
 import FolderHierarchy from "./FolderHierarchy";
 import { FILE_TYPE } from "../../constants";
 import { FileExplorerProps } from "./model";
 import ActionsPopup from "../ActionsPopup";
 import './FileExplorer.css'
+import DoubleClickFileContext from "../../context/double-click";
 
 const FileExplorer: React.FC<FileExplorerProps> = ({ config, onFileSelect, selectedFileId }) => {
-
-  const [fileContext, setFileContext] = useState<string | null >(null);
+  const { currentFile, setFileContext } = useContext(
+    DoubleClickFileContext
+  ) as any;
 
   const handleContextMenu = (e: React.MouseEvent, fileName: string) => {
     e.preventDefault(); 
@@ -15,8 +17,8 @@ const FileExplorer: React.FC<FileExplorerProps> = ({ config, onFileSelect, selec
   };
 
   const handleAction = (action: string) => {
-    if (fileContext) {
-      console.log(`${action}: ${fileContext}`);
+    if (currentFile) {
+      console.log(`${action}: ${currentFile}`);
       setFileContext(null); 
     }
   };
@@ -26,7 +28,7 @@ const FileExplorer: React.FC<FileExplorerProps> = ({ config, onFileSelect, selec
       {config.map((conf) => {
         if (conf?.type === FILE_TYPE.FILE) {
           return (
-          <>
+          <div className="file-wrapper">
             <div key={conf.id}
               className={`file ${selectedFileId === conf.id ? "active" : ""}`}
               onContextMenu={(e) => handleContextMenu(e, conf.name)}
@@ -34,13 +36,13 @@ const FileExplorer: React.FC<FileExplorerProps> = ({ config, onFileSelect, selec
             >
               {conf?.name}
             </div>
-            {fileContext && (
+            {currentFile === conf?.name && (
               <ActionsPopup
                 onClose={() => setFileContext(null)}
                 onAction={handleAction}
               />
             )}
-            </>
+            </div>
           );
         } else {
           return (
