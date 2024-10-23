@@ -1,5 +1,5 @@
-# File Explorer (https://rashmi988.github.io/file-explorer/)
-This repository contains a simple File Explorer component built using React, TypeScript, and CSS, without relying on any external libraries. The component allows users to navigate through a structured file system, interact with files and folders, and perform basic file actions.
+# File Explorer
+This repository contains a simple File Explorer component built using React, TypeScript, and CSS, without relying on any external libraries. The component allows users to navigate through a structured file system, interact with files and folders, and perform basic file actions and is hosted on: https://rashmi988.github.io/file-explorer/
 
 ## Features
 **File and Folder Rendering:** Uses a predefined data structure to render files and folders.
